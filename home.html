@@ -1,66 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo-Home</title>
-        <!-- daisyui cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- tailwindcss cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- font-awsome cdn -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body class="bg-[#f4f5f7] h-[100vh]">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] h-full">
     <!-- navbar section -->
-    <nav class="flex justify-between items-center max-w-lg mx-auto p-4 border-b-2 border-gray-200">
-        <div class="flex justify-center items-center gap-3">
-            <img class="h-[50px] w-[60px]" src="./assets/Group.png" alt="">
-            <div>
-                <h1 class="font-extrabold text-2xl">$<span>4500</span></h1>
-                <p>Available Balance</p>
-            </div>
-        </div>
+    <nav
+      class="flex justify-between items-center max-w-lg mx-auto p-4 border-b-2 border-gray-200 bg-white"
+    >
+      <div class="flex justify-center items-center gap-3">
+        <img class="h-[50px] w-[60px]" src="./assets/Group.png" alt="" />
         <div>
-            <button class="btn">
-                <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
-                Logout
-            </button>
+          <h1 class="font-extrabold text-2xl">$<span>4500</span></h1>
+          <p>Available Balance</p>
         </div>
+      </div>
+      <div>
+        <button class="btn">
+          <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>
+          Logout
+        </button>
+      </div>
     </nav>
     <!-- banner section -->
-     <section class="max-w-lg mx-auto p-4 m-[25px]">
-        <h1 class="font-extrabold text-2xl">🔥 Welcome to Payooo!</h1>
-        <p>Enjoy easy and convenient financial services with us. Cashout charge is low.</p>
-        <!-- banner-container -->
-        <div class="text-center grid grid-cols-3 gap-4 mt-5">
-            <!-- banner-cards -->
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/wallet1.png" alt="">
-                <h2>Add Money</h2>
-            </div>
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/money1.png" alt="">
-                <h2>Cashout</h2>
-            </div>
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/send1.png" alt="">
-                <h2>Transfer Money</h2>
-            </div>
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/bonus1.png" alt="">
-                <h2>Get Bonus</h2>
-            </div>
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/purse1.png" alt="">
-                <h2>Pay Bill</h2>
-            </div>
-            <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6 ">
-                <img class="mx-auto" src="./assets/transaction1.png" alt="">
-                <h2>Transaction</h2>
-            </div>
+    <section class="max-w-lg mx-auto p-4 bg-white rounded-b-2xl">
+      <h1 class="font-extrabold text-2xl mt-5">🔥 Welcome to Payooo!</h1>
+      <p>
+        Enjoy easy and convenient financial services with us. Cashout charge is
+        low.
+      </p>
+      <!-- banner-container -->
+      <div class="text-center grid grid-cols-3 gap-4 mt-5">
+        <!-- banner-cards -->
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/wallet1.png" alt="" />
+          <h2>Add Money</h2>
         </div>
-     </section>
-</body>
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/money1.png" alt="" />
+          <h2>Cashout</h2>
+        </div>
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/send1.png" alt="" />
+          <h2>Transfer Money</h2>
+        </div>
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/bonus1.png" alt="" />
+          <h2>Get Bonus</h2>
+        </div>
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/purse1.png" alt="" />
+          <h2>Pay Bill</h2>
+        </div>
+        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+          <img class="mx-auto" src="./assets/transaction1.png" alt="" />
+          <h2>Transaction</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Forms section -->
+    <section class="all-forms max-w-lg mx-auto p-5">
+      <!-- add money form -->
+      <h1 class="font-bold text-2xl mb-5">Add Money</h1>
+      <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+        <div class="flex flex-col gap-2 mb-3">
+          <label class="font-bold" for="">Select A Bank</label>
+          <select class="select rounded-3xl bg-[#f4f5f7] w-full">
+            <option disabled selected>Select Bank</option>
+            <option>Islami Bank</option>
+            <option>Ducth Bangla Bank</option>
+            <option>AB Bank</option>
+            <option>ICFC Bank</option>
+          </select>
+        </div>
+        <div class="flex flex-col gap-2 mb-3">
+            <label class="font-bold" for="">Bank Account Number</label>
+            <input id="mobile-number" type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+        </div>
+        <div class="flex flex-col gap-2 mb-3">
+            <label class="font-bold" for="">Amount to Add</label>
+            <input id="mobile-number" type="text" placeholder="Enter amount to withdraw" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+        </div>
+        <div class="flex flex-col gap-2 mb-3">
+            <label class="font-bold" for="">Pin Number</label>
+            <input id="pin-number" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+        </div>
+        <button id="login-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Add Money</button>
+      </form>
+    </section>
+  </body>
 </html>
