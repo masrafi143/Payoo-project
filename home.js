@@ -34,3 +34,27 @@ const payBillButton = document.getElementById("pay-bill-btn").addEventListener("
     document.getElementById("bonus-coupun").style.display = "none";
     document.getElementById("add-money").style.display = "none";
 })
+
+const validPin = 123;
+
+// add-money functionality
+const addMoneyBtn = document.getElementById("add-btn").addEventListener("click", function(e){
+    e.preventDefault();
+    const bank = document.getElementById("select-bank").value;
+    const accountNumber = document.getElementById("account-number").value;
+    const addPin = parseInt(document.getElementById("add-pin").value);
+    const addMoney = parseInt(document.getElementById("add-amount").value);
+    if(accountNumber.length !== 11){
+        alert("Please Enter a valid account number!");
+        return;
+    }
+    if(addPin !== validPin){
+        alert("Please Enter a valid Pin");
+        return;
+    }
+    const availableMoney = parseInt(document.getElementById("available-money").innerText);
+    
+    const totalAmount = availableMoney + addMoney;
+    document.getElementById("available-money").innerText = totalAmount;
+})
+
