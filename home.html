@@ -21,7 +21,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="bg-[#f4f5f7] h-full">
+  <body class="bg-[#f4f5f7]">
     <!-- navbar section -->
     <nav
       class="flex justify-between items-center max-w-lg mx-auto p-4 border-b-2 border-gray-200 bg-white"
@@ -29,7 +29,7 @@
       <div class="flex justify-center items-center gap-3">
         <img class="h-[50px] w-[60px]" src="./assets/Group.png" alt="" />
         <div>
-          <h1 class="font-extrabold text-2xl">$<span>4500</span></h1>
+          <h1 class="font-extrabold text-2xl">$<span id="available-money">4500</span></h1>
           <p>Available Balance</p>
         </div>
       </div>
@@ -50,27 +50,27 @@
       <!-- banner-container -->
       <div class="text-center grid grid-cols-3 gap-4 mt-5">
         <!-- banner-cards -->
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="add-money-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h2>Add Money</h2>
         </div>
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="cashout-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/money1.png" alt="" />
           <h2>Cashout</h2>
         </div>
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="transfer-money-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/send1.png" alt="" />
           <h2>Transfer Money</h2>
         </div>
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="get-bonus-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/bonus1.png" alt="" />
           <h2>Get Bonus</h2>
         </div>
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="pay-bill-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/purse1.png" alt="" />
           <h2>Pay Bill</h2>
         </div>
-        <div class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
+        <div id="transaction-btn" class="border border-gray-500 rounded-2xl flex flex-col gap-2 p-6">
           <img class="mx-auto" src="./assets/transaction1.png" alt="" />
           <h2>Transaction</h2>
         </div>
@@ -79,32 +79,123 @@
     <!-- Forms section -->
     <section class="all-forms max-w-lg mx-auto p-5">
       <!-- add money form -->
-      <h1 class="font-bold text-2xl mb-5">Add Money</h1>
-      <form action="" class="bg-white rounded-3xl flex flex-col p-5">
-        <div class="flex flex-col gap-2 mb-3">
-          <label class="font-bold" for="">Select A Bank</label>
-          <select class="select rounded-3xl bg-[#f4f5f7] w-full">
-            <option disabled selected>Select Bank</option>
-            <option>Islami Bank</option>
-            <option>Ducth Bangla Bank</option>
-            <option>AB Bank</option>
-            <option>ICFC Bank</option>
-          </select>
-        </div>
-        <div class="flex flex-col gap-2 mb-3">
-            <label class="font-bold" for="">Bank Account Number</label>
-            <input id="mobile-number" type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
-        </div>
-        <div class="flex flex-col gap-2 mb-3">
-            <label class="font-bold" for="">Amount to Add</label>
-            <input id="mobile-number" type="text" placeholder="Enter amount to withdraw" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
-        </div>
-        <div class="flex flex-col gap-2 mb-3">
-            <label class="font-bold" for="">Pin Number</label>
-            <input id="pin-number" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
-        </div>
-        <button id="login-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Add Money</button>
-      </form>
+      <div id="add-money" >
+        <h1 class="font-bold text-2xl mb-5">Add Money</h1>
+        <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+          <div class="flex flex-col gap-2 mb-3">
+            <label class="font-bold" for="">Select A Bank</label>
+            <select id="select-bank" class="select rounded-3xl bg-[#f4f5f7] w-full">
+              <option disabled selected>Select Bank</option>
+              <option>Islami Bank</option>
+              <option>Dutch Bangla Bank</option>
+              <option>AB Bank</option>
+              <option>ICFC Bank</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-2 mb-3">
+              <label class="font-bold" for="">Bank Account Number</label>
+              <input id="account-number" type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+          </div>
+          <div class="flex flex-col gap-2 mb-3">
+              <label class="font-bold" for="">Amount to Add</label>
+              <input id="add-amount" type="text" placeholder="Enter amount to add-money" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+          </div>
+          <div class="flex flex-col gap-2 mb-3">
+              <label class="font-bold" for="">Pin Number</label>
+              <input id="add-pin" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+          </div>
+          <button id="add-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Add Money</button>
+        </form>
+      </div>
+      
+      
+      <!-- cashout form -->
+       <div id="cashout" >
+         <h1 class="font-bold text-2xl mb-5">Cash Out</h1>
+         <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+   
+             <div class="flex flex-col gap-2 mb-3">
+                 <label class="font-bold" for="">Agent Number</label>
+                 <input id="agent-account" type="text" placeholder="Enter 11 digit agent number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">Amount</label>
+                   <input id="withdraw-amount" type="text" placeholder="Enter amount to withdraw" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">Pin Number</label>
+                   <input id="withdraw-pin" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <button id="withdraw-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Withdraw Money</button>
+           </form>
+       </div>
+        
+        <!-- transfer money form -->
+         <div id="transfer-money" >
+           <h1 class="font-bold text-2xl mb-5">Transfer Money</h1>
+           <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+               
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">User Account Number</label>
+                   <input id="user-account" type="text" placeholder="Enter 11 digit user account number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">Amount</label>
+                   <input id="transfer-amount" type="text" placeholder="Enter amount to transfer" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">Pin Number</label>
+                   <input id="transfer-pin" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               <button id="transfer-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Send Now</button>
+           </form>
+         </div>
+
+        <!-- Bonus Coupon form -->
+         <div id="bonus-coupun" >
+           <h1 class="font-bold text-2xl mb-5">Get Bonus</h1>
+           <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+               
+               <div class="flex flex-col gap-2 mb-3">
+                   <label class="font-bold" for="">Bonus Coupon</label>
+                   <input id="bonus-coupon" type="text" placeholder="Enter your coupon" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+               </div>
+               
+               <button id="bonus-coupon-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Get Bonus</button>
+           </form>
+         </div>
+
+        <!-- Pay Bill form -->
+         <div id="pay-bill" >
+           <h1 class="font-bold text-2xl mb-5">Pay Bill</h1>
+           <form action="" class="bg-white rounded-3xl flex flex-col p-5">
+             <div class="flex flex-col gap-2 mb-3">
+               <label class="font-bold" for="">Select to Pay</label>
+               <select id="select-bank-pay" class="select rounded-3xl bg-[#f4f5f7] w-full">
+                 <option disabled selected>Select Bank</option>
+                 <option>Islami Bank</option>
+                 <option>Dutch Bangla Bank</option>
+                 <option>AB Bank</option>
+                 <option>ICFC Bank</option>
+               </select>
+             </div>
+             <div class="flex flex-col gap-2 mb-3">
+                 <label class="font-bold" for="">Biller Account Number</label>
+                 <input id="biller-account" type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+             </div>
+             <div class="flex flex-col gap-2 mb-3">
+                 <label class="font-bold" for="">Amount to pay</label>
+                 <input id="pay-amount" type="text" placeholder="Enter amount to add-money" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+             </div>
+             <div class="flex flex-col gap-2 mb-3">
+                 <label class="font-bold" for="">Pin Number</label>
+                 <input id="pay-pin" type="password" placeholder="Enter 4-digit pin" class="input rounded-3xl bg-[#f4f5f7] w-full"/>
+             </div>
+             <button id="pay-btn" class="btn bg-[#0874F2] text-white rounded-3xl">Pay Now</button>
+           </form>
+         </div>
     </section>
+
+    <script src="./home.js"></script>
   </body>
 </html>
