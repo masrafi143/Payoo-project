@@ -58,3 +58,22 @@ const addMoneyBtn = document.getElementById("add-btn").addEventListener("click",
     document.getElementById("available-money").innerText = totalAmount;
 })
 
+// cashout/withdraw money functionality
+const withdrawBtn = document.getElementById("withdraw-btn").addEventListener("click", function(e){
+    e.preventDefault();
+    const agentNum = document.getElementById("agent-account").value;
+    const withdrawAmount = parseInt(document.getElementById("withdraw-amount").value);
+    const withdrawPin = parseInt(document.getElementById("withdraw-pin").value);
+
+    if(agentNum.length !== 11){
+        alert("Enter valid agent number");
+        return;
+    }
+    if(withdrawPin !== validPin){
+        alert("Wrong Pin");
+        return;
+    }
+    const availableMoney = parseInt(document.getElementById("available-money").innerText);
+    const currentAmount = availableMoney - withdrawAmount;
+    document.getElementById("available-money").innerText = currentAmount;
+})
